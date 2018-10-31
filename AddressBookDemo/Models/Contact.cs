@@ -22,14 +22,14 @@ namespace AddressBookDemo.Models
         [Display(Name = "Email Address")]
         public string EmailAddress { get; set; }
 
-        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Invalid number")]
+        [Phone(ErrorMessage = "Invalid Home Phone")]
         [Display(Name = "Home Phone")]
         public string HomePhone { get; set; }
 
-        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Invalid number")]
+        [Phone(ErrorMessage = "Invalid Mobile Number")]
         public string Mobile { get; set; }
 
-        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Invalid number")]
+        [Phone(ErrorMessage = "Invalid Work Phone")]
         [Display(Name = "Work Phone")]
         public string WorkPhone { get; set; }
 
